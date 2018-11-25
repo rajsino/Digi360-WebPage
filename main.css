@@ -1,6 +1,8 @@
 html {
     background: #ffffff;
     -webkit-font-smoothing: antialiased;
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -14,6 +16,46 @@ body {
     width: 100%;
     height: 100%;
     padding: 0em 0em 0em 0em;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3 {
+  padding-top: 0%;
+}
+
+.full-container {
+  overflow: hidden;
+  padding-top: 0%;
+  position: relative;
+}
+
+.full-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+/* 4x3 Aspect Ratio */
+.full-container-4x3 {
+  padding-top: 0%;
 }
 
 .centered-wrapper {
@@ -61,11 +103,11 @@ samp {
 }
 
 marquee {
-    font-weight: 900;
+    font-weight: 600;
     color: #ffffff;
     background: #D81B60;
-    padding: 2em 2em 2em;
-    line-height: 1;
+    padding: 0em 1em 0em 1em;
+    line-height: 2;
     position: absolute;
     bottom: 0;
     left: 0;
