@@ -26,7 +26,7 @@ body {
 
 .iframe-container iframe {
    border: 0;
-   height: 100%;
+   height: 90%;
    left: 0;
    position: absolute;
    top: 0;
@@ -132,4 +132,35 @@ img {
         -webkit-filter: grayscale(0%);
         filter: grayscale(0%);
     }
+}
+
+/* Split the screen in half */
+.split-top {
+  width: 100%;
+  height: 94%;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.split-bottom {
+  width: 100%;
+  height: 6%;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.top {
+  top: 0;
+  background-color: black;
+}
+
+.bottom {
+  bottom: 0;
+  background-color: #D81B60;
 }
