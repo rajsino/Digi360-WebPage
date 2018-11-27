@@ -40,9 +40,19 @@
     <body >
         
         <div class="split-top top">
-          <div class="iframe-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/auHmWnfWK68?list=PLi63EH8ZrVTtXbS7gwbVyryFZHd8F4sRP&cc_load_policy=1&loop=1&hl=en_UK&autoplay=1&yt:cc=on&rel=0&mute=1" 
-                              frameborder="0" allow="autoplay; encrypted-media"></iframe>
+            
+            <div class="split-top left">
+                <div class="iframe-container">
+                  <iframe src="https://www.youtube.com/embed/auHmWnfWK68?list=PLi63EH8ZrVTtXbS7gwbVyryFZHd8F4sRP&cc_load_policy=1&loop=1&hl=en_UK&autoplay=1&yt:cc=on&rel=0&mute=0" 
+                                  frameborder="0" allow="autoplay; encrypted-media"></iframe>
+            </div>
+                
+            <div class="split-top right">
+                <div class="azure-container">
+                  <video 
+                     id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" data-setup='{ "controls": true, "autoplay": true }'/>
+                </div>
+            </div>
         </div>
         </div>
 
@@ -50,5 +60,23 @@
            <marquee behavior="scroll" direction="left" width="100%" ><font size="6">Digi360 2018 @CNC, Kochi. Program is on Air, same you can access from Digi360 App. Stay till the end to make sure you don't miss out on the CDB Carnival and cultural events. Exciting games and prizes awaits you all. Inviting one and all to make this event a grand success !!!</font></marquee>
         </div>
         
+        
+        <script>
+            var myOptions = {
+                "nativeControlsForTouch": false,
+                autoplay: true,
+                controls: true,
+                width: "100%",
+                height: "580",
+                plugins: {
+                    appInsights: {
+                        'debug': true
+                    }
+                }
+            };
+            var myPlayer = amp("azuremediaplayer", myOptions);
+//            myPlayer.src([{ src: "http://digi360-aase.streaming.media.azure.net/9f0cf120-7586-43e4-a1c6-63e70e3ffd16/751bbfca-8e9b-4940-ad84-026842bb714f.ism/manifest(format=mpd-time-csf)", type: "application/vnd.ms-sstr+xml" }, ]);
+            myPlayer.src([{ src: "http://digi360-aase.streaming.media.azure.net/8dd2fd23-9d4e-46cd-8011-54cefc6ecaf4/bf93ee1e-ed64-4797-bf6c-71a16bfbe2a4.ism/manifest", type: "application/vnd.ms-sstr+xml" }, ]);
+        </script>
     </body>
 </html>
